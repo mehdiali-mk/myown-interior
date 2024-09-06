@@ -1,0 +1,16 @@
+{
+  "name": "myown-interior",
+  "version": "1.0.0",
+  "description": "It is a multi-page website for Myown Interiors and Decors. It is my academic project to enhance my TailwindCSS skills.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./input/input.css -o ./css/style.css",
+    "watch": "tailwindcss -i ./input/input.css -o ./css/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.10"
+  }
+}
