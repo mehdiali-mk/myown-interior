@@ -5,12 +5,18 @@
   "main": "index.js",
   "scripts": {
     "build": "tailwindcss -i ./input/input.css -o ./css/style.css",
-    "watch": "tailwindcss -i ./input/input.css -o ./css/style.css --watch"
+    "watch": "tailwindcss -i ./input/input.css -o ./css/style.css --watch",
+    "scss:build": "sass --no-source-map scss:css",
+    "scss:watch": "sass --no-source-map --watch scss:css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.4.10"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.6.0",
+    "sass": "^1.78.0"
   }
 }

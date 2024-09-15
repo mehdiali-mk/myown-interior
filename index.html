@@ -3,8 +3,1487 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
     <title>Myown Interiors | E-Commerce Website | Tailwind Project</title>
+    <link rel="stylesheet" href="css/fontawesome.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- ========== Start Header Section ========== -->
+    <header class="py-4 bg-light shadow-md">
+      <div class="container flex items-center justify-between">
+        <!-- Logo -->
+        <a href="#" class="block w-32 animate__animated animate__flipInX">
+          <img src="Image/Myown Interiors-01.png" alt="" class="w-full" />
+        </a>
+
+        <!-- Search Bar -->
+        <div class="w-full xl:max-w-xl lg:max-w-lg lg:flex relative hidden">
+          <span class="absolute left-4 top-3 text-lg text-secondary">
+            <i class="fas fa-search"></i>
+          </span>
+          <input
+            type="text"
+            name="userSearch"
+            id="userSearch"
+            class="w-[80%] border border-r-0 border-secondary pl-12 py-3 px-3 rounded-l-md focus:ring-secondary bg-light"
+            placeholder="Search"
+          />
+          <button
+            class="absolute -right-1 h-[100%] px-8 border-1 border-secondary btnBlue"
+            type="submit"
+          >
+            Search
+          </button>
+        </div>
+
+        <!-- Navigation Button -->
+        <div class="space-x-4 flex items-center">
+          <a
+            href="#"
+            class="block text-center relative text-secondary hover:text-primary transition"
+          >
+            <span
+              class="absolute -top-1 right-1 w-5 h-5 rounded-full bg-primary text-center text-secondary font-bold flex items-center justify-center text-xs"
+              >5</span
+            >
+            <div class="text-2xl">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+            <p class="text-sm leading-3 font-semibold">Wish List</p>
+          </a>
+          <a
+            href="#"
+            class="block text-center relative text-secondary hover:text-primary transition"
+          >
+            <span
+              class="absolute -top-1 -right-3 w-5 h-5 rounded-full bg-primary text-center text-secondary font-bold flex items-center justify-center text-xs"
+              >5</span
+            >
+            <div class="text-2xl">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <p class="text-sm leading-3 font-semibold">Cart</p>
+          </a>
+          <a
+            href="#"
+            class="block text-center relative text-secondary hover:text-primary transition"
+          >
+            <div class="text-2xl">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <p class="text-sm leading-3 font-semibold">Account</p>
+          </a>
+        </div>
+      </div>
+    </header>
+    <!-- ========== End Header Section ========== -->
+
+    <!-- ========== Start Navbar Section ========== -->
+    <nav class="bg-secondary hidden lg:block">
+      <div class="container">
+        <div class="flex">
+          <!-- Categories -->
+          <div
+            class="px-8 py-4 bg-primary flex items-center text-secondary cursor-pointer relative group"
+          >
+            <span><i class="fas fa-bars"></i></span>
+            <span class="ml-2 capitalize font-semibold">All Categories</span>
+
+            <!-- Categories Dropdown -->
+            <div
+              class="absolute left-0 top-full w-full bg-white shadow-md py-3 invisible opacity-0 group-hover:opacity-100 group-hover:visible transition duration-300 z-50 divide-y divide-secondary divide-dashed"
+            >
+              <!-- Single Category -->
+              <a
+                href="#"
+                class="px-6 py-3 flex items-center hover:bg-light transition"
+              >
+                <img
+                  src="Image/icons/bed.svg"
+                  alt="Bed SVG"
+                  class="w-5 h-5 object-contain"
+                />
+                <span class="ml-6 text-secondary text-sm font-semibold"
+                  >BedRoom</span
+                >
+              </a>
+              <!-- Single Category -->
+              <a
+                href="#"
+                class="px-6 py-3 flex items-center hover:bg-light transition"
+              >
+                <img
+                  src="Image/icons/sofa.svg"
+                  alt="Bed SVG"
+                  class="w-5 h-5 object-contain"
+                />
+                <span class="ml-6 text-secondary text-sm font-semibold"
+                  >Sofa</span
+                >
+              </a>
+              <!-- Single Category -->
+              <a
+                href="#"
+                class="px-6 py-3 flex items-center hover:bg-light transition"
+              >
+                <img
+                  src="Image/icons/office.svg"
+                  alt="Bed SVG"
+                  class="w-5 h-5 object-contain"
+                />
+                <span class="ml-6 text-secondary text-sm font-semibold"
+                  >Office</span
+                >
+              </a>
+              <!-- Single Category -->
+              <a
+                href="#"
+                class="px-6 py-3 flex items-center hover:bg-light transition"
+              >
+                <img
+                  src="Image/icons/outdoor-cafe.svg"
+                  alt="Bed SVG"
+                  class="w-5 h-5 object-contain"
+                />
+                <span class="ml-6 text-secondary text-sm font-semibold"
+                  >OutDoor</span
+                >
+              </a>
+              <!-- Single Category -->
+              <a
+                href="#"
+                class="px-6 py-3 flex items-center hover:bg-light transition"
+              >
+                <img
+                  src="Image/icons/terrace.svg"
+                  alt="Bed SVG"
+                  class="w-5 h-5 object-contain"
+                />
+                <span class="ml-6 text-secondary text-sm font-semibold"
+                  >Matress</span
+                >
+              </a>
+            </div>
+          </div>
+
+          <!-- Navbar -->
+          <div class="flex items-center justify-between flex-grow pl-12">
+            <div class="flex items-center space-x-6 text-base capitalize">
+              <a
+                href="index.html"
+                class="text-light hover:text-primary transition font-semibold"
+                >Home</a
+              >
+              <a
+                href="index.html"
+                class="text-light hover:text-primary transition font-semibold"
+                >Shop</a
+              >
+              <a
+                href="index.html"
+                class="text-light hover:text-primary transition font-semibold"
+                >About Us</a
+              >
+              <a
+                href="index.html"
+                class="text-light hover:text-primary transition font-semibold"
+                >Contact Us</a
+              >
+            </div>
+
+            <a
+              href="login.html"
+              class="ml-auto text-light hover:text-primary transition font-semibold"
+              >Login / Register
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- ========== End Navbar Section ========== -->
+
+    <!-- ========== Start Mobile Menu Section ========== -->
+    <div
+      class="fixed w-full border-t border-gray-200 shadow-sm bg-light py-3 bottom-0 left-0 px-6 flex justify-around items-start lg:hidden z-10"
+    >
+      <a
+        href="javascript:void(0)"
+        class="block text-center text-secondary hover:text-primary transition relative"
+      >
+        <div class="text-2xl" id="menuBar">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="text-xs leading-3">Menu</div>
+      </a>
+      <a
+        href="javascript:void(1)"
+        class="block text-center text-secondary hover:text-primary transition relative"
+      >
+        <div class="text-2xl" id="categoryBar">
+          <i class="fas fa-list-ul"></i>
+        </div>
+        <div class="text-xs leading-3">Categories</div>
+      </a>
+      <a
+        href=""
+        class="block text-center text-secondary hover:text-primary transition relative"
+      >
+        <div class="text-2xl">
+          <i class="fas fa-search"></i>
+        </div>
+        <div class="text-xs leading-3">Search</div>
+      </a>
+      <a
+        href=""
+        class="block text-center text-secondary hover:text-primary transition relative"
+      >
+        <span
+          class="absolute -top-1 -right-3 w-5 h-5 text-xs bg-primary text-secondary rounded-full flex items-center justify-center p-2 font-bold"
+          >4</span
+        >
+        <div class="text-2xl">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        <div class="text-xs leading-3">Cart</div>
+      </a>
+    </div>
+    <!-- ========== End Mobile Menu Section ========== -->
+
+    <!-- ========== Start Mobile Side Menu Section ========== -->
+    <div
+      class="fixed left-0 top-0 w-full h-full bg-black bg-opacity-30 shadow hidden z-50"
+      id="mobileMenu"
+    >
+      <div
+        class="absolute left-0 top-0 w-72 h-full bg-light shadow z-50 animate__animated animate__fadeInLeftBig animate__faster"
+      >
+        <div
+          class="flex items-center justify-between bg-secondary w-full py-3 px-4"
+        >
+          <div></div>
+          <h3 class="text-xl font-semibold text-light mb-1 font-roboto">
+            Menu
+          </h3>
+          <div
+            id="closeMenu"
+            class="text-light hover:text-primary text-xl cursor-pointer"
+          >
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+        <div
+          class="w-full bg-light py-3 flex flex-col items-start justify-center transition duration-300 z-50 divide-y divide-secondary divide-dashed"
+        >
+          <a href="#" class="mobileMenuLink">Home</a>
+          <a href="#" class="mobileMenuLink">Shop</a>
+          <a href="#" class="mobileMenuLink">About Us</a>
+          <a href="#" class="mobileMenuLink">Contact</a>
+        </div>
+      </div>
+    </div>
+    <!-- ========== End Mobile Side Menu Section ========== -->
+
+    <!-- ========== Start Mobile Side Category Section ========== -->
+    <div
+      class="fixed left-0 top-0 w-full h-full bg-black bg-opacity-30 shadow hidden z-50"
+      id="mobileCategory"
+    >
+      <div
+        class="absolute left-0 top-0 w-72 h-full bg-light shadow z-50 animate__animated animate__fadeInLeftBig animate__faster"
+      >
+        <div
+          class="flex items-center justify-between bg-secondary w-full py-3 px-4"
+        >
+          <div></div>
+          <h3 class="text-xl font-semibold text-light mb-1 font-roboto">
+            Category
+          </h3>
+          <div
+            id="closeCategory"
+            class="text-light hover:text-primary text-xl cursor-pointer"
+          >
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+        <div
+          class="w-full bg-light py-3 flex flex-col items-start justify-center transition duration-300 z-50 divide-y divide-secondary divide-dashed"
+        >
+          <a href="#" class="mobileCategoryLink">
+            <span>
+              <img
+                src="Image/icons/bed.svg"
+                alt="Bed SVG"
+                class="w-5 h-5 object-contain"
+              /> </span
+            >Bedroom</a
+          >
+          <a href="#" class="mobileCategoryLink">
+            <span
+              ><img
+                src="Image/icons/sofa.svg"
+                alt="Bed SVG"
+                class="w-5 h-5 object-contain" /></span
+            >Sofa</a
+          >
+          <a href="#" class="mobileCategoryLink">
+            <span
+              ><img
+                src="Image/icons/office.svg"
+                alt="Bed SVG"
+                class="w-5 h-5 object-contain" /></span
+            >Office</a
+          >
+          <a href="#" class="mobileCategoryLink">
+            <span
+              ><img
+                src="Image/icons/outdoor-cafe.svg"
+                alt="Bed SVG"
+                class="w-5 h-5 object-contain" /></span
+            >OutDoor</a
+          >
+          <a href="#" class="mobileCategoryLink">
+            <span
+              ><img
+                src="Image/icons/terrace.svg"
+                alt="Bed SVG"
+                class="w-5 h-5 object-contain" /></span
+            >Mattress</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- ========== End Mobile Side Category Section ========== -->
+
+    <!-- ========== Start Banner Section ========== -->
+    <div
+      class="bg-cover bg-no-repeat bg-center py-36 relative rounded-b-xl"
+      style="background-image: url(Image/banner-bg.jpg)"
+    >
+      <div class="container">
+        <!-- Banner Content Start -->
+        <h1
+          class="xl:text-6xl md:text-5xl text-4xl text-secondary font-semibold mb-4"
+        >
+          Best Collection For <br class="hidden sm:block" />
+          Home Decoration
+        </h1>
+        <p class="text-base text-secondary leading-6">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse culpa
+          <br class="hidden sm:block" />
+          voluptatum illo eius, aperiam rerum expedita quam obcaecati nisi
+          corrupti!
+        </p>
+
+        <div class="mt-12">
+          <!-- <a
+            href="shop.html"
+            class="bg-primary border border-primary text-secondary px-8 py-3 font-medium rounded-md uppercase hover:bg-transparent hover:text-secondary hover:border-secondary transition"
+            >Shop Now</a
+          > -->
+          <button
+            class="btnOrange animate__animated animate__pulse animate__infinite animate__slow font-bold"
+          >
+            <span class="relative">Shop Now</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- ========== End Banner Section ========== -->
+
+    <!-- ========== Start Features Section ========== -->
+    <div class="container py-16">
+      <div class="lg:w-10/12 grid md:grid-cols-3 mx-auto justify-center gap-6">
+        <!-- Feature 1 -->
+        <div
+          class="border-primary border-2 rounded-lg px-8 py-4 lg:px-3 lg:py-6 flex justify-center items-center gap-5 transition duration-300 hover:bg-light"
+        >
+          <img
+            src="Image/icons/delivery-van.svg"
+            alt=""
+            class="lg:w-12 w-10 h-12 object-contain"
+          />
+          <div>
+            <h4 class="font-medium capitalize text-lg">Free Shipping</h4>
+            <p class="text-xs lg:text-sm text-gray-500">Order Over ₹350</p>
+          </div>
+        </div>
+        <!-- Feature 1 -->
+        <div
+          class="border-primary border-2 rounded-lg px-8 py-4 lg:px-3 lg:py-6 flex justify-center items-center gap-5 transition duration-300 hover:bg-light"
+        >
+          <img
+            src="Image/icons/money-back.svg"
+            alt=""
+            class="lg:w-12 w-10 h-12 object-contain"
+          />
+          <div>
+            <h4 class="font-medium capitalize text-lg">Money Returns</h4>
+            <p class="text-xs lg:text-sm text-gray-500">
+              30 Days Moneu Returns
+            </p>
+          </div>
+        </div>
+        <!-- Feature 3 -->
+        <div
+          class="border-primary border-2 rounded-lg px-8 py-4 lg:px-3 lg:py-6 flex justify-center items-center gap-5 transition duration-300 hover:bg-light"
+        >
+          <img
+            src="Image/icons/service-hours.svg"
+            alt=""
+            class="lg:w-12 w-10 h-12 object-contain"
+          />
+          <div>
+            <h4 class="font-medium capitalize text-lg">24 / 7 Support</h4>
+            <p class="text-xs lg:text-sm text-gray-500">Customer Support</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== End Features Section ========== -->
+
+    <!-- ========== Start Categories Section ========== -->
+    <div class="container pb-16">
+      <h2 class="secondaryHeading">Shop By Categories</h2>
+      <div class="grid lg:grid-cols-3 sm:grid-cols-2 gap-6">
+        <!-- 1st Categories -->
+        <div class="relative group overflow-hidden rounded-lg">
+          <img
+            src="Image/category/category-1.jpg"
+            alt="Category image"
+            class="w-full"
+          />
+          <a
+            href="#"
+            class="absolute inset-0 bg-secondary bg-opacity-40 group-hover:bg-opacity-55 flex items-center justify-center text-2xl text-white font-roboto font-medium tracking-wide transition"
+            >Bedroom</a
+          >
+        </div>
+        <!-- 2nd Categories -->
+        <div class="relative group overflow-hidden rounded-lg">
+          <img
+            src="Image/category/category-2.jpg"
+            alt="Category image"
+            class="w-full"
+          />
+          <a
+            href="#"
+            class="absolute inset-0 bg-secondary bg-opacity-40 group-hover:bg-opacity-55 flex items-center justify-center text-2xl text-white font-roboto font-medium tracking-wide transition"
+            >Sofa</a
+          >
+        </div>
+        <!-- 3rd Categories -->
+        <div class="relative group overflow-hidden rounded-lg">
+          <img
+            src="Image/category/category-3.jpg"
+            alt="Category image"
+            class="w-full"
+          />
+          <a
+            href="#"
+            class="absolute inset-0 bg-secondary bg-opacity-40 group-hover:bg-opacity-55 flex items-center justify-center text-2xl text-white font-roboto font-medium tracking-wide transition"
+            >Office</a
+          >
+        </div>
+        <!-- 4th Categories -->
+        <div class="relative group overflow-hidden rounded-lg">
+          <img
+            src="Image/category/category-4.jpg"
+            alt="Category image"
+            class="w-full"
+          />
+          <a
+            href="#"
+            class="absolute inset-0 bg-secondary bg-opacity-40 group-hover:bg-opacity-55 flex items-center justify-center text-2xl text-white font-roboto font-medium tracking-wide transition"
+            >OutDoor</a
+          >
+        </div>
+        <!-- 5th Categories -->
+        <div class="relative group overflow-hidden rounded-lg">
+          <img
+            src="Image/category/category-5.jpg"
+            alt="Category image"
+            class="w-full"
+          />
+          <a
+            href="#"
+            class="absolute inset-0 bg-secondary bg-opacity-40 group-hover:bg-opacity-55 flex items-center justify-center text-2xl text-white font-roboto font-medium tracking-wide transition"
+            >Mattress</a
+          >
+        </div>
+        <!-- 6th Categories -->
+        <div class="relative group overflow-hidden rounded-lg">
+          <img
+            src="Image/category/category-6.jpg"
+            alt="Category image"
+            class="w-full"
+          />
+          <a
+            href="#"
+            class="absolute inset-0 bg-secondary bg-opacity-40 group-hover:bg-opacity-55 flex items-center justify-center text-2xl text-white font-roboto font-medium tracking-wide transition"
+            >Dinings</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- ========== End Categories Section ========== -->
+
+    <!-- ========== Start Product Section ========== -->
+    <div class="container pb-16">
+      <h2 class="secondaryHeading">Top New Arrival</h2>
+      <div class="grid lg:grid-cols-4 sm:grid-cols-2 gap-6">
+        <!-- Product 1 -->
+        <div class="rounded bg-light shadow overflow-hidden">
+          <div class="relative group">
+            <img
+              src="Image/products/product1.jpg"
+              alt="1st Product Image"
+              class="w-full"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-40 gap-2 opacity-0 group-hover:opacity-100 transition"
+            >
+              <div class="w-full h-full relative">
+                <div class="absolute right-2 top-2">
+                  <a
+                    href="#"
+                    class="w-10 h-10 bg-light text-secondary text-lg flex items-center justify-center rounded-full shadow-lg"
+                    ><i class="fa-regular fa-heart"></i
+                  ></a>
+                </div>
+                <div class="absolute bottom-0 w-full">
+                  <a
+                    href="./view.html"
+                    class="flex items-center justify-center bg-secondary opacity-100 py-2 text-light gap-2 w-full"
+                  >
+                    <i class="fas fa-eye"></i>
+                    View more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-3">
+            <h4 class="text-secondary uppercase font-bold text-xl mb-3">
+              Royal Sofa
+            </h4>
+            <div class="flex items-end gap-2 justify-start mb-2">
+              <p class="text-2xl text-primary font-bold">₹ 25,680.00</p>
+              <p class="text-base text-gray-400 font-semibold line-through">
+                ₹ 34,780.00
+              </p>
+            </div>
+            <div class="flex items-center justify-start gap-2 mb-1">
+              <div
+                class="text-base text-primary flex items-center justify-start gap-1"
+              >
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <p class="text-xs text-gray-400 font-bold">(150)</p>
+            </div>
+          </div>
+          <div
+            class="w-full bg-primary py-2 flex items-center justify-center hover:bg-secondary transition duration-200"
+          >
+            <a
+              href="#"
+              class="text-light text-xl font-bold uppercase w-full text-center"
+              >Shop Now</a
+            >
+          </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="rounded bg-light shadow overflow-hidden">
+          <div class="relative group">
+            <img
+              src="Image/products/product2.jpg"
+              alt="1st Product Image"
+              class="w-full"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-40 gap-2 opacity-0 group-hover:opacity-100 transition"
+            >
+              <div class="w-full h-full relative">
+                <div class="absolute right-2 top-2">
+                  <a
+                    href="#"
+                    class="w-10 h-10 bg-light text-secondary text-lg flex items-center justify-center rounded-full shadow-lg"
+                    ><i class="fa-regular fa-heart"></i
+                  ></a>
+                </div>
+                <div class="absolute bottom-0 w-full">
+                  <a
+                    href="./view.html"
+                    class="flex items-center justify-center bg-secondary opacity-100 py-2 text-light gap-2 w-full"
+                  >
+                    <i class="fas fa-eye"></i>
+                    View more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-3">
+            <h4 class="text-secondary uppercase font-bold text-xl mb-3">
+              Single Bed Sofa
+            </h4>
+            <div class="flex items-end gap-2 justify-start mb-2">
+              <p class="text-2xl text-primary font-bold">₹ 32,800.00</p>
+              <p class="text-base text-gray-400 font-semibold line-through">
+                ₹ 40,200.00
+              </p>
+            </div>
+            <div class="flex items-center justify-start gap-2 mb-1">
+              <div
+                class="text-base text-primary flex items-center justify-start gap-1"
+              >
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <p class="text-xs text-gray-400 font-bold">(150)</p>
+            </div>
+          </div>
+          <div
+            class="w-full bg-primary py-2 flex items-center justify-center hover:bg-secondary transition duration-200"
+          >
+            <a
+              href="#"
+              class="text-light text-xl font-bold uppercase w-full text-center"
+              >Shop Now</a
+            >
+          </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="rounded bg-light shadow overflow-hidden">
+          <div class="relative group">
+            <img
+              src="Image/products/product3.jpg"
+              alt="1st Product Image"
+              class="w-full"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-40 gap-2 opacity-0 group-hover:opacity-100 transition"
+            >
+              <div class="w-full h-full relative">
+                <div class="absolute right-2 top-2">
+                  <a
+                    href="#"
+                    class="w-10 h-10 bg-light text-secondary text-lg flex items-center justify-center rounded-full shadow-lg"
+                    ><i class="fa-regular fa-heart"></i
+                  ></a>
+                </div>
+                <div class="absolute bottom-0 w-full">
+                  <a
+                    href="./view.html"
+                    class="flex items-center justify-center bg-secondary opacity-100 py-2 text-light gap-2 w-full"
+                  >
+                    <i class="fas fa-eye"></i>
+                    View more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-3">
+            <h4 class="text-secondary uppercase font-bold text-xl mb-3">
+              Mattress
+            </h4>
+            <div class="flex items-end gap-2 justify-start mb-2">
+              <p class="text-2xl text-primary font-bold">₹ 13,599.00</p>
+              <p class="text-base text-gray-400 font-semibold line-through">
+                ₹ 16,799.00
+              </p>
+            </div>
+            <div class="flex items-center justify-start gap-2 mb-1">
+              <div
+                class="text-base text-primary flex items-center justify-start gap-1"
+              >
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <p class="text-xs text-gray-400 font-bold">(150)</p>
+            </div>
+          </div>
+          <div
+            class="w-full bg-primary py-2 flex items-center justify-center hover:bg-secondary transition duration-200"
+          >
+            <a
+              href="#"
+              class="text-light text-xl font-bold uppercase w-full text-center"
+              >Shop Now</a
+            >
+          </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="rounded bg-light shadow overflow-hidden">
+          <div class="relative group">
+            <img
+              src="Image/products/product4.jpg"
+              alt="1st Product Image"
+              class="w-full"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-40 gap-2 opacity-0 group-hover:opacity-100 transition"
+            >
+              <div class="w-full h-full relative">
+                <div class="absolute right-2 top-2">
+                  <a
+                    href="#"
+                    class="w-10 h-10 bg-light text-secondary text-lg flex items-center justify-center rounded-full shadow-lg"
+                    ><i class="fa-regular fa-heart"></i
+                  ></a>
+                </div>
+                <div class="absolute bottom-0 w-full">
+                  <a
+                    href="./view.html"
+                    class="flex items-center justify-center bg-secondary opacity-100 py-2 text-light gap-2 w-full"
+                  >
+                    <i class="fas fa-eye"></i>
+                    View more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-3">
+            <h4 class="text-secondary uppercase font-bold text-xl mb-3">
+              Double Bed
+            </h4>
+            <div class="flex items-end gap-2 justify-start mb-2">
+              <p class="text-2xl text-primary font-bold">₹ 45,899.00</p>
+              <p class="text-base text-gray-400 font-semibold line-through">
+                ₹ 47,699.00
+              </p>
+            </div>
+            <div class="flex items-center justify-start gap-2 mb-1">
+              <div
+                class="text-base text-primary flex items-center justify-start gap-1"
+              >
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <p class="text-xs text-gray-400 font-bold">(150)</p>
+            </div>
+          </div>
+          <div
+            class="w-full bg-primary py-2 flex items-center justify-center hover:bg-secondary transition duration-200"
+          >
+            <a
+              href="#"
+              class="text-light text-xl font-bold uppercase w-full text-center"
+              >Shop Now</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== End Product Section ========== -->
+
+    <!-- ========== Start Ad Section ========== -->
+    <div class="container pb-16">
+      <a href="#">
+        <img src="Image/offer.jpg" alt="Offer Image" class="w-full" />
+      </a>
+    </div>
+    <!-- ========== End Ad Section ========== -->
+
+    <!-- ========== Start Recommended Section ========== -->
+    <div class="container pb-16">
+      <h2 class="secondaryHeading">Recommended For You</h2>
+      <div class="grid lg:grid-cols-4 sm:grid-cols-2 gap-6">
+        <!-- Product 1 -->
+        <div class="rounded bg-light shadow overflow-hidden">
+          <div class="relative group">
+            <img
+              src="Image/products/product1.jpg"
+              alt="1st Product Image"
+              class="w-full"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-40 gap-2 opacity-0 group-hover:opacity-100 transition"
+            >
+              <div class="w-full h-full relative">
+                <div class="absolute right-2 top-2">
+                  <a
+                    href="#"
+                    class="w-10 h-10 bg-light text-secondary text-lg flex items-center justify-center rounded-full shadow-lg"
+                    ><i class="fa-regular fa-heart"></i
+                  ></a>
+                </div>
+                <div class="absolute bottom-0 w-full">
+                  <a
+                    href="./view.html"
+                    class="flex items-center justify-center bg-secondary opacity-100 py-2 text-light gap-2 w-full"
+                  >
+                    <i class="fas fa-eye"></i>
+                    View more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-3">
+            <h4 class="text-secondary uppercase font-bold text-xl mb-3">
+              Royal Sofa
+            </h4>
+            <div class="flex items-end gap-2 justify-start mb-2">
+              <p class="text-2xl text-primary font-bold">₹ 25,680.00</p>
+              <p class="text-base text-gray-400 font-semibold line-through">
+                ₹ 34,780.00
+              </p>
+            </div>
+            <div class="flex items-center justify-start gap-2 mb-1">
+              <div
+                class="text-base text-primary flex items-center justify-start gap-1"
+              >
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <p class="text-xs text-gray-400 font-bold">(150)</p>
+            </div>
+          </div>
+          <div
+            class="w-full bg-primary py-2 flex items-center justify-center hover:bg-secondary transition duration-200"
+          >
+            <a
+              href="#"
+              class="text-light text-xl font-bold uppercase w-full text-center"
+              >Shop Now</a
+            >
+          </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="rounded bg-light shadow overflow-hidden">
+          <div class="relative group">
+            <img
+              src="Image/products/product2.jpg"
+              alt="1st Product Image"
+              class="w-full"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-40 gap-2 opacity-0 group-hover:opacity-100 transition"
+            >
+              <div class="w-full h-full relative">
+                <div class="absolute right-2 top-2">
+                  <a
+                    href="#"
+                    class="w-10 h-10 bg-light text-secondary text-lg flex items-center justify-center rounded-full shadow-lg"
+                    ><i class="fa-regular fa-heart"></i
+                  ></a>
+                </div>
+                <div class="absolute bottom-0 w-full">
+                  <a
+                    href="./view.html"
+                    class="flex items-center justify-center bg-secondary opacity-100 py-2 text-light gap-2 w-full"
+                  >
+                    <i class="fas fa-eye"></i>
+                    View more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-3">
+            <h4 class="text-secondary uppercase font-bold text-xl mb-3">
+              Single Bed Sofa
+            </h4>
+            <div class="flex items-end gap-2 justify-start mb-2">
+              <p class="text-2xl text-primary font-bold">₹ 32,800.00</p>
+              <p class="text-base text-gray-400 font-semibold line-through">
+                ₹ 40,200.00
+              </p>
+            </div>
+            <div class="flex items-center justify-start gap-2 mb-1">
+              <div
+                class="text-base text-primary flex items-center justify-start gap-1"
+              >
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <p class="text-xs text-gray-400 font-bold">(150)</p>
+            </div>
+          </div>
+          <div
+            class="w-full bg-primary py-2 flex items-center justify-center hover:bg-secondary transition duration-200"
+          >
+            <a
+              href="#"
+              class="text-light text-xl font-bold uppercase w-full text-center"
+              >Shop Now</a
+            >
+          </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="rounded bg-light shadow overflow-hidden">
+          <div class="relative group">
+            <img
+              src="Image/products/product3.jpg"
+              alt="1st Product Image"
+              class="w-full"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-40 gap-2 opacity-0 group-hover:opacity-100 transition"
+            >
+              <div class="w-full h-full relative">
+                <div class="absolute right-2 top-2">
+                  <a
+                    href="#"
+                    class="w-10 h-10 bg-light text-secondary text-lg flex items-center justify-center rounded-full shadow-lg"
+                    ><i class="fa-regular fa-heart"></i
+                  ></a>
+                </div>
+                <div class="absolute bottom-0 w-full">
+                  <a
+                    href="./view.html"
+                    class="flex items-center justify-center bg-secondary opacity-100 py-2 text-light gap-2 w-full"
+                  >
+                    <i class="fas fa-eye"></i>
+                    View more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-3">
+            <h4 class="text-secondary uppercase font-bold text-xl mb-3">
+              Mattress
+            </h4>
+            <div class="flex items-end gap-2 justify-start mb-2">
+              <p class="text-2xl text-primary font-bold">₹ 13,599.00</p>
+              <p class="text-base text-gray-400 font-semibold line-through">
+                ₹ 16,799.00
+              </p>
+            </div>
+            <div class="flex items-center justify-start gap-2 mb-1">
+              <div
+                class="text-base text-primary flex items-center justify-start gap-1"
+              >
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <p class="text-xs text-gray-400 font-bold">(150)</p>
+            </div>
+          </div>
+          <div
+            class="w-full bg-primary py-2 flex items-center justify-center hover:bg-secondary transition duration-200"
+          >
+            <a
+              href="#"
+              class="text-light text-xl font-bold uppercase w-full text-center"
+              >Shop Now</a
+            >
+          </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="rounded bg-light shadow overflow-hidden">
+          <div class="relative group">
+            <img
+              src="Image/products/product4.jpg"
+              alt="1st Product Image"
+              class="w-full"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-40 gap-2 opacity-0 group-hover:opacity-100 transition"
+            >
+              <div class="w-full h-full relative">
+                <div class="absolute right-2 top-2">
+                  <a
+                    href="#"
+                    class="w-10 h-10 bg-light text-secondary text-lg flex items-center justify-center rounded-full shadow-lg"
+                    ><i class="fa-regular fa-heart"></i
+                  ></a>
+                </div>
+                <div class="absolute bottom-0 w-full">
+                  <a
+                    href="./view.html"
+                    class="flex items-center justify-center bg-secondary opacity-100 py-2 text-light gap-2 w-full"
+                  >
+                    <i class="fas fa-eye"></i>
+                    View more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-3">
+            <h4 class="text-secondary uppercase font-bold text-xl mb-3">
+              Double Bed
+            </h4>
+            <div class="flex items-end gap-2 justify-start mb-2">
+              <p class="text-2xl text-primary font-bold">₹ 45,899.00</p>
+              <p class="text-base text-gray-400 font-semibold line-through">
+                ₹ 47,699.00
+              </p>
+            </div>
+            <div class="flex items-center justify-start gap-2 mb-1">
+              <div
+                class="text-base text-primary flex items-center justify-start gap-1"
+              >
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <p class="text-xs text-gray-400 font-bold">(150)</p>
+            </div>
+          </div>
+          <div
+            class="w-full bg-primary py-2 flex items-center justify-center hover:bg-secondary transition duration-200"
+          >
+            <a
+              href="#"
+              class="text-light text-xl font-bold uppercase w-full text-center"
+              >Shop Now</a
+            >
+          </div>
+        </div>
+        <!-- Product 5 -->
+        <div class="rounded bg-light shadow overflow-hidden">
+          <div class="relative group">
+            <img
+              src="Image/products/product5.jpg"
+              alt="1st Product Image"
+              class="w-full"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-40 gap-2 opacity-0 group-hover:opacity-100 transition"
+            >
+              <div class="w-full h-full relative">
+                <div class="absolute right-2 top-2">
+                  <a
+                    href="#"
+                    class="w-10 h-10 bg-light text-secondary text-lg flex items-center justify-center rounded-full shadow-lg"
+                    ><i class="fa-regular fa-heart"></i
+                  ></a>
+                </div>
+                <div class="absolute bottom-0 w-full">
+                  <a
+                    href="./view.html"
+                    class="flex items-center justify-center bg-secondary opacity-100 py-2 text-light gap-2 w-full"
+                  >
+                    <i class="fas fa-eye"></i>
+                    View more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-3">
+            <h4 class="text-secondary uppercase font-bold text-xl mb-3">
+              Dining Set
+            </h4>
+            <div class="flex items-end gap-2 justify-start mb-2">
+              <p class="text-2xl text-primary font-bold">₹ 52,299.00</p>
+              <p class="text-base text-gray-400 font-semibold line-through">
+                ₹ 60,899.00
+              </p>
+            </div>
+            <div class="flex items-center justify-start gap-2 mb-1">
+              <div
+                class="text-base text-primary flex items-center justify-start gap-1"
+              >
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <p class="text-xs text-gray-400 font-bold">(150)</p>
+            </div>
+          </div>
+          <div
+            class="w-full bg-primary py-2 flex items-center justify-center hover:bg-secondary transition duration-200"
+          >
+            <a
+              href="#"
+              class="text-light text-xl font-bold uppercase w-full text-center"
+              >Shop Now</a
+            >
+          </div>
+        </div>
+        <!-- Product 6 -->
+        <div class="rounded bg-light shadow overflow-hidden">
+          <div class="relative group">
+            <img
+              src="Image/products/product6.jpg"
+              alt="1st Product Image"
+              class="w-full"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-40 gap-2 opacity-0 group-hover:opacity-100 transition"
+            >
+              <div class="w-full h-full relative">
+                <div class="absolute right-2 top-2">
+                  <a
+                    href="#"
+                    class="w-10 h-10 bg-light text-secondary text-lg flex items-center justify-center rounded-full shadow-lg"
+                    ><i class="fa-regular fa-heart"></i
+                  ></a>
+                </div>
+                <div class="absolute bottom-0 w-full">
+                  <a
+                    href="./view.html"
+                    class="flex items-center justify-center bg-secondary opacity-100 py-2 text-light gap-2 w-full"
+                  >
+                    <i class="fas fa-eye"></i>
+                    View more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-3">
+            <h4 class="text-secondary uppercase font-bold text-xl mb-3">
+              AutoLift Chair
+            </h4>
+            <div class="flex items-end gap-2 justify-start mb-2">
+              <p class="text-2xl text-primary font-bold">₹ 12,599.00</p>
+              <p class="text-base text-gray-400 font-semibold line-through">
+                ₹ 16,299.00
+              </p>
+            </div>
+            <div class="flex items-center justify-start gap-2 mb-1">
+              <div
+                class="text-base text-primary flex items-center justify-start gap-1"
+              >
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <p class="text-xs text-gray-400 font-bold">(150)</p>
+            </div>
+          </div>
+          <div
+            class="w-full bg-primary py-2 flex items-center justify-center hover:bg-secondary transition duration-200"
+          >
+            <a
+              href="#"
+              class="text-light text-xl font-bold uppercase w-full text-center"
+              >Shop Now</a
+            >
+          </div>
+        </div>
+        <!-- Product 7 -->
+        <div class="rounded bg-light shadow overflow-hidden">
+          <div class="relative group">
+            <img
+              src="Image/products/product7.jpg"
+              alt="1st Product Image"
+              class="w-full"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-40 gap-2 opacity-0 group-hover:opacity-100 transition"
+            >
+              <div class="w-full h-full relative">
+                <div class="absolute right-2 top-2">
+                  <a
+                    href="#"
+                    class="w-10 h-10 bg-light text-secondary text-lg flex items-center justify-center rounded-full shadow-lg"
+                    ><i class="fa-regular fa-heart"></i
+                  ></a>
+                </div>
+                <div class="absolute bottom-0 w-full">
+                  <a
+                    href="./view.html"
+                    class="flex items-center justify-center bg-secondary opacity-100 py-2 text-light gap-2 w-full"
+                  >
+                    <i class="fas fa-eye"></i>
+                    View more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-3">
+            <h4 class="text-secondary uppercase font-bold text-xl mb-3">
+              Restful Chair
+            </h4>
+            <div class="flex items-end gap-2 justify-start mb-2">
+              <p class="text-2xl text-primary font-bold">₹ 42,599.00</p>
+              <p class="text-base text-gray-400 font-semibold line-through">
+                ₹ 50,799.00
+              </p>
+            </div>
+            <div class="flex items-center justify-start gap-2 mb-1">
+              <div
+                class="text-base text-primary flex items-center justify-start gap-1"
+              >
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <p class="text-xs text-gray-400 font-bold">(150)</p>
+            </div>
+          </div>
+          <div
+            class="w-full bg-primary py-2 flex items-center justify-center hover:bg-secondary transition duration-200"
+          >
+            <a
+              href="#"
+              class="text-light text-xl font-bold uppercase w-full text-center"
+              >Shop Now</a
+            >
+          </div>
+        </div>
+        <!-- Product 8 -->
+        <div class="rounded bg-light shadow overflow-hidden">
+          <div class="relative group">
+            <img
+              src="Image/products/product8.jpg"
+              alt="1st Product Image"
+              class="w-full"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-40 gap-2 opacity-0 group-hover:opacity-100 transition"
+            >
+              <div class="w-full h-full relative">
+                <div class="absolute right-2 top-2">
+                  <a
+                    href="#"
+                    class="w-10 h-10 bg-light text-secondary text-lg flex items-center justify-center rounded-full shadow-lg"
+                    ><i class="fa-regular fa-heart"></i
+                  ></a>
+                </div>
+                <div class="absolute bottom-0 w-full">
+                  <a
+                    href="./view.html"
+                    class="flex items-center justify-center bg-secondary opacity-100 py-2 text-light gap-2 w-full"
+                  >
+                    <i class="fas fa-eye"></i>
+                    View more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-3">
+            <h4 class="text-secondary uppercase font-bold text-xl mb-3">
+              High Chair
+            </h4>
+            <div class="flex items-end gap-2 justify-start mb-2">
+              <p class="text-2xl text-primary font-bold">₹ 45,899.00</p>
+              <p class="text-base text-gray-400 font-semibold line-through">
+                ₹ 47,699.00
+              </p>
+            </div>
+            <div class="flex items-center justify-start gap-2 mb-1">
+              <div
+                class="text-base text-primary flex items-center justify-start gap-1"
+              >
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <p class="text-xs text-gray-400 font-bold">(150)</p>
+            </div>
+          </div>
+          <div
+            class="w-full bg-primary py-2 flex items-center justify-center hover:bg-secondary transition duration-200"
+          >
+            <a
+              href="#"
+              class="text-light text-xl font-bold uppercase w-full text-center"
+              >Shop Now</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== End Recommended Section ========== -->
+
+    <!-- ========== Start Footer Section ========== -->
+    <footer class="bg-white mt-16 pt-16 pb-12 border-t border-secondary">
+      <div class="container">
+        <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+          <div class="space-y-8 xl:col-span-1">
+            <img
+              src="Image/Myown Interiors-01.png"
+              alt="Company Logo"
+              class="w-1/2"
+            />
+            <p class="text-base text-gray-500 font-roboto">
+              At Myown Furniture, we design and craft high-quality, stylish
+              furniture to elevate your space. With a focus on comfort and
+              durability, we bring your unique vision to life.
+            </p>
+            <div class="flex space-x-2">
+              <a
+                href="https://www.linkedin.com/in/mehdiali-mk/"
+                target="_blank"
+                class="p-4 bg-secondary bg-opacity-95 text-light rounded-full w-5 h-5 flex items-center justify-center hover:shadow-md"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://github.com/mehdiali-mk/"
+                target="_blank"
+                class="p-4 bg-secondary bg-opacity-95 text-light rounded-full w-5 h-5 flex items-center justify-center hover:shadow-md"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/mehdiali.mk/"
+                target="_blank"
+                class="p-4 bg-secondary bg-opacity-95 text-light rounded-full w-5 h-5 flex items-center justify-center hover:shadow-md"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://twitter.com/mehdiali_mk"
+                target="_blank"
+                class="p-4 bg-secondary bg-opacity-95 text-light rounded-full w-5 h-5 flex items-center justify-center hover:shadow-md"
+              >
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/mehdiali_mk/"
+                target="_blank"
+                class="p-4 bg-secondary bg-opacity-95 text-light rounded-full w-5 h-5 flex items-center justify-center hover:shadow-md"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+          <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+            <div class="md:grid md:grid-cols-2 md:gap-8">
+              <div>
+                <h3
+                  class="text-sm text-gray-400 font-semibold tracking-wide uppercase"
+                >
+                  Solutions
+                </h3>
+                <div class="mt-4 space-y-4">
+                  <a href="#" class="footerLink">Marketing</a>
+                  <a href="#" class="footerLink">Analytics</a>
+                  <a href="#" class="footerLink">Commerce</a>
+                  <a href="#" class="footerLink">Insights</a>
+                </div>
+              </div>
+              <div class="mt-12 md:mt-0">
+                <h3
+                  class="text-sm text-gray-400 font-semibold tracking-wide uppercase"
+                >
+                  Support
+                </h3>
+                <div class="mt-4 space-y-4">
+                  <a href="#" class="footerLink">Pricing</a>
+                  <a href="#" class="footerLink">Documentation</a>
+                  <a href="#" class="footerLink">Guides</a>
+                  <a href="#" class="footerLink">API Status</a>
+                </div>
+              </div>
+            </div>
+            <div class="md:grid md:grid-cols-2 md:gap-8">
+              <div>
+                <h3
+                  class="text-sm text-gray-400 font-semibold tracking-wide uppercase"
+                >
+                  Company
+                </h3>
+                <div class="mt-4 space-y-4">
+                  <a href="#" class="footerLink">About</a>
+                  <a href="#" class="footerLink">Blog</a>
+                  <a href="#" class="footerLink">Jobs</a>
+                  <a href="#" class="footerLink">Service</a>
+                </div>
+              </div>
+              <div class="mt-12 md:mt-0">
+                <h3
+                  class="text-sm text-gray-400 font-semibold tracking-wide uppercase"
+                >
+                  Legal
+                </h3>
+                <div class="mt-4 space-y-4">
+                  <a href="#" class="footerLink">Claim</a>
+                  <a href="#" class="footerLink">Privacy</a>
+                  <a href="#" class="footerLink">Policy</a>
+                  <a href="#" class="footerLink">Terms</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ========== End Footer Section ========== -->
+
+    <!-- ========== Start Copyright Section ========== -->
+    <div class="bg-secondary py-4">
+      <div class="container flex items-center justify-between">
+        <p class="text-light font-semibold text-xl">
+          &copy; By Mehdiali Kadiwala
+        </p>
+        <div>
+          <img src="Image/methods.png" alt="Methods" class="h-5" />
+        </div>
+      </div>
+    </div>
+    <!-- ========== End Copyright Section ========== -->
+
+    <!-- ========== Start Mobile Menu JavaScript Section ========== -->
+    <script>
+      const menuBarEl = document.querySelector("#menuBar");
+      const mobileMenuEl = document.querySelector("#mobileMenu");
+      const closeMenuEl = document.querySelector("#closeMenu");
+
+      const categoryBarEl = document.querySelector("#categoryBar");
+      const mobileCategoryEl = document.querySelector("#mobileCategory");
+      const closeCategoryEl = document.querySelector("#closeCategory");
+
+      categoryBarEl.addEventListener("click", () => {
+        mobileCategoryEl.classList.toggle("hidden");
+      });
+      closeCategoryEl.addEventListener("click", () => {
+        mobileCategoryEl.classList.toggle("hidden");
+      });
+
+      menuBarEl.addEventListener("click", () => {
+        mobileMenuEl.classList.toggle("hidden");
+      });
+      closeMenuEl.addEventListener("click", () => {
+        mobileMenuEl.classList.toggle("hidden");
+      });
+    </script>
+    <!-- ========== End Mobile Menu JavaScript Section ========== -->
+  </body>
 </html>
